@@ -53,54 +53,6 @@ public class Client extends JFrame {
         PrintWriter writer;
         try {
             socket = new Socket(host, port);
-            //reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-            //reader = new ObjectInputStream(socket.getInputStream());
-            //writer = new PrintWriter(socket.getOutputStream(), true);
-            //phone = new Phone(socket);
-//        while (!socket.isClosed()) {
-//            if (board.getFirstClick() != null && board.getSecondClick() != null) {
-//                //writer.println(board.getFirstClick() + " " + board.getSecondClick());
-//                Phone phone = new Phone(socket);
-//                phone.writeLine(board.getFirstClick() + " " + board.getSecondClick());
-//                board.resetClicks();
-//                break;
-//            }
-//        }
-//        //Packet packet = (Packet) phone.readObj();
-//        //System.out.println(packet.getStart() + "->" + packet.getTarget());
-//        Phone phone = new Phone(socket);
-//        String command = phone.readLine();
-//        //command = command.substring(4);
-//        System.out.println(command);
-//        while (!socket.isClosed()) {
-//            if ((command == null)) {
-//                //command = reader.readLine();
-//                command = phone.readLine();
-//            }
-//            String[] parsed = command.split(" ");
-//            System.out.println("From server:" + command);
-//            if (parsed[0].equals("END")) {
-//                socket.close();
-//            }
-//            gameLogic.createMove(parsed[0], parsed[1]);
-//            //board.setGameLogic(gameLogic);
-//            board.repaint();
-//            while (!socket.isClosed()) {
-//                if (board.getFirstClick() != null && board.getSecondClick() != null) {
-//                    //writer.println(board.getFirstClick() + " " + board.getSecondClick());
-//                    phone.writeLine(board.getFirstClick() + " " + board.getSecondClick());
-//                    board.resetClicks();
-//                    command = null;
-//                    break;
-//                }
-//            }
-//            //System.out.println(reader.readLine());
-////            GameLogic gameUpdate = (GameLogic) reader.readObject();
-////            System.out.println(10);
-////            board.setGameLogic(gameUpdate);
-////            board.repaint();
-//        }
-            //Phone phone;
             reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             writer = new PrintWriter(socket.getOutputStream(), true);
         } catch (IOException e) {
